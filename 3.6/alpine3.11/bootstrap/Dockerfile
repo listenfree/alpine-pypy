@@ -37,13 +37,13 @@ RUN set -ex; \
 
 WORKDIR /usr/src/pypy
 
-COPY patches /patches
+COPY 3.6/alpine3.11/patches /patches
 RUN set -ex; \
     for patch in /patches/*.patch; do \
         patch -p1 -E -i "$patch"; \
     done
 
-COPY ./build.sh /build.sh
+COPY 3.6/alpine3.11/build.sh /build.sh
 CMD ["/build.sh"]
 
 VOLUME /tmp
