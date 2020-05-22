@@ -44,6 +44,7 @@ RUN set -ex; \
     done
 
 COPY 3.6/alpine3.11/build.sh /build.sh
+RUN /build.sh
 CMD ["/build.sh"]
 
 VOLUME /tmp
