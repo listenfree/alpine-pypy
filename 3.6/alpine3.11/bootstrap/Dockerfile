@@ -1,4 +1,4 @@
-FROM python:2.7-alpine3.11
+FROM --platform=aarch64 python:2.7-alpine3.11
 LABEL maintainer "Jamie Hewland <jhewland@gmail.com>"
 
 # Add build dependencies
