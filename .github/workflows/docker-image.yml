@@ -29,5 +29,5 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: build dockerfile
       run: |
-        docker build . -f alpine-pypy/3.6/alpine3.11/bootstrap/Dockerfile -t pypy22
+        docker build . -f 3.6/alpine3.11/bootstrap/Dockerfile -t pypy22
 
