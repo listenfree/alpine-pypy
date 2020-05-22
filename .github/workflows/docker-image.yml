@@ -28,10 +28,6 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: build dockerfile
-      env:
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        DOCKER_USER: ${{ secrets.DOCKER_USER }} 
       run: |
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        docker build . -f alpine-pypy/3.6/alpine3.11/bootstrap/Dockerfile -t $DOCKER_USER/pypy22
-        docker push $DOCKER_USER/arm64
+        docker build . -f alpine-pypy/3.6/alpine3.11/bootstrap/Dockerfile -t pypy22
+
